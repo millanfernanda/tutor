@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+	<script src="index.js"></script>
+	<!-- <script src="importScripts.html"></script> -->
+	<script
+		src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"
+	></script>
+	<script
+		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"
+	></script>
+	<link
+		rel="stylesheet"
+		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+		crossorigin="anonymous"
+	/>
+	<base href="[[=URL('static')]]/" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+	/>
+	<link
+		rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css"
+	/>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+	<script
+		type="text/javascript"
+		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+	></script>
+	<script type="text/javascript">
+		;(function () {
+			emailjs.init('nJOnTohF3872Ebg4y')
+		})()
+	</script>
+</head>
+<html lang="en">
+	<body id="darkmode">
+		<div id="banner" class="hero">
+			<div id="banner-title" class="level is-parent">
+				<div class="level-left is-child">
+					<h1 class="title">Fernanda Millan</h1>
+				</div>
+				<div class="level-right is-child tab" style="margin-top: 2em">
+					<a
+						class="tablinks title default"
+						onclick="tabsPage(event, 'home')"
+						id="home-tab"
+						><p>HOME</p></a
+					>
+					<a
+						class="tablinks title default"
+						onclick="tabsPage(event, 'experience')"
+						id="experience-tab"
+						><p>EXPERIENCE</p></a
+					>
+					<a
+						class="tablinks title default"
+						onclick="tabsPage(event, 'contact')"
+						id="contact-tab"
+						><p>CONTACT ME</p></a
+					>
+				</div>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+			<span onclick="closeImage(event)" class="modal-close-img">&times;</span>
+			<img class="modal-content" id="modal-img" />
+			<div id="modal-caption"></div>
+		</div>
+		<section class="section tabcontent" id="home">
+			<div class="background-home">
+				<!--<div class="container-body">
+					<div id="background-home"> -->
+				<div class="columns">
+					<div class="column is-one-half" id="get-started-section">
+						<div class="title">
+							Spanish Tutor: <br />
+							Unlock Your potential
+						</div>
+						<div style="color: rgb(255, 255, 255)">
+							<a
+								class="btn"
+								id="buttom-default"
+								onclick="buttonClick('contact')"
+								>GET STARTED NOW</a
+							>
+						</div>
+					</div>
+					<div class="column is-one-half" id="get-started-image">
+						<figure class="image">
+							<img class="profile-image" src="../images/img.png" />
+						</figure>
+					</div>
+				</div>
+			</div>
+			<!--</div>
+			</div> -->
+			<div class="bio-home">
+				<div class="container is-fluid">
+					<div class="container-body">
+						<div id="bio-home-details">
+							<h1 class="title">About Me</h1>
+							<h3 class="subtitle">
+								I am a native spanish speaker and am fluent in english. I am a
+								fan of nature and cats. I am a curious person, like to learn and
+								share my knowledge. I have many years of experiance with
+								tutoring and customer service, which I believe has allowed me to
+								interact and handle all types of people of all ages.
+							</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- <div class="container is-fluid">
+				<div class="container-body">
+					<div class="buttons-home">
+						<div class="columns">
+							<div class="column is-one-half" id="button-home-details">
+								<div class="title">Learn more</div>
+								<div>
+									<a class="btn" id="buttom-default" onclick="buttonClick('experience')"
+										>CLICK HERE</a
+									>
+								</div>
+							</div>
+							<div class="column is-one-half" id="button-home-details">
+								<div class="title">Contact me</div>
+								<div>
+									<a class="btn" id="buttom-default" onclick="buttonClick('contact')"
+										>CLICK HERE</a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div> -->
+			<div class="container is-fluid">
+				<div
+					class="container-body"
+					id="bio-home-details"
+					style="
+						padding-left: calc(10% - 0.5em);
+						padding-right: calc(10% - 0.5em);
+					"
+				>
+					<div>
+						<h1 class="title">Plans</h1>
+					</div>
+					<div class="columns">
+						<div class="column is-one-third">
+							<div class="tile is-parent is-vertical">
+								<article class="body-information" class="tile is-child">
+									<h3 class="title">A1/A2</h3>
+									<div class="title" style="color: rgb(255, 255, 255)">
+										Beginner <br />Plan
+									</div>
+
+									<div style="color: rgb(255, 255, 255); padding-top: 2vw">
+										<a
+											class="btn"
+											id="buttom-default"
+											onclick="buttonClick('contact', 'Beginner')"
+											>GET STARTED</a
+										>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="column is-one-third">
+							<div class="tile is-parent is-vertical">
+								<article class="body-information" class="tile is-child">
+									<h3 class="title">B1/B2</h3>
+									<div class="title" style="color: rgb(255, 255, 255)">
+										Intermediate <br />Plan
+									</div>
+
+									<div style="color: rgb(255, 255, 255); padding-top: 2vw">
+										<a
+											class="btn"
+											id="buttom-default"
+											onclick="buttonClick('contact', 'Intermediate')"
+											>GET STARTED</a
+										>
+									</div>
+								</article>
+							</div>
+						</div>
+						<div class="column">
+							<div class="tile is-parent is-vertical">
+								<article class="body-information" class="tile is-child">
+									<h3 class="title">C1/C2</h3>
+									<div class="title" style="color: rgb(255, 255, 255)">
+										Advanced <br />Plan
+									</div>
+									<div style="color: rgb(255, 255, 255); padding-top: 2vw">
+										<a
+											class="btn"
+											id="buttom-default"
+											onclick="buttonClick('contact', 'Advanced')"
+											>GET STARTED</a
+										>
+									</div>
+								</article>
+							</div>
+						</div>
+					</div>
+					<div id="plan-body"></div>
+				</div>
+			</div>
+		</section>
+		<section class="section tabcontent" id="experience">
+			<div class="container is-fluid">
+				<div class="container-title">
+					<h2 class="title header">Work Experience</h2>
+				</div>
+				<div class="container-body">
+					<div
+						class="tile is-parent is-vertical"
+						style="
+							padding-left: calc(25% - 3em);
+							padding-right: calc(25% - 3em);
+						"
+					>
+						<article class="body-information" class="tile is-child">
+							<h3 class="subtitle" style="color: rgb(255, 255, 255)">
+								I am confident that with my experience and knowledge we can get
+								you to your spanish speaking goals.
+							</h3>
+							<h3 class="subtitle" style="margin: 0em">Teaching Experience</h3>
+							<ul>
+								<li>
+									I have over two years of tutoring experience. This has allowed
+									me to understand that every student has different goals and
+									level of knowledge. I am open to make a plan that works for
+									you, creating an enjoyable and interactive learning
+									experience.
+								</li>
+							</ul>
+							<h3 class="subtitle" style="margin: 0em">Customer Service</h3>
+							<ul>
+								<li>
+									I have over three years of customer service experience
+									handling thousands of people per day, in positions such as
+									weighter and bar tender. These positions have given me skills
+									such as time management, adaptability, patience and
+									confidence.
+								</li>
+							</ul>
+							<div id="contact-button">
+								<a
+									class="btn"
+									id="buttom-default"
+									onclick="buttonClick('contact')"
+									>SCHEDULE A MEETING</a
+								>
+							</div>
+						</article>
+					</div>
+				</div>
+				<br />
+			</div>
+		</section>
+
+		<section class="section tabcontent" id="contact">
+			<div class="container is-fluid">
+				<div class="container-title">
+					<h2 class="title header">Contact Me</h2>
+				</div>
+				<div class="container-body">
+					<div
+						class="tile is-parent is-vertical"
+						style="
+							padding-left: calc(25% - 3em);
+							padding-right: calc(25% - 3em);
+						"
+					>
+						<article class="body-form" class="tile is-child">
+							<form>
+								<div class="form-group">
+									<label for="Inputname1">Name</label>
+									<input
+										id="name"
+										type="name"
+										class="form-control"
+										placeholder="name"
+									/>
+								</div>
+								<div class="form-group">
+									<label for="InputEmail1">Email address</label>
+									<input
+										type="email"
+										id="email"
+										class="form-control"
+										aria-describedby="emailHelp"
+										placeholder="Enter email"
+									/>
+									<small id="emailHelp" class="form-text text-muted"
+										>We'll never share your email with anyone else.</small
+									>
+								</div>
+								<div class="form-group">
+									<div class="columns">
+										<div class="column is-one-half">
+											<label for="InputLevel1">Level</label>
+											<select
+												id="level"
+												class="form-select form-select-lg mb-3 form-control"
+												aria-label=".form-select-lg example"
+											>
+												<option selected>Select one</option>
+												<option value="Beginner">Beginner</option>
+												<option value="Intermediate">Intermediate</option>
+												<option value="Advanced">Advanced</option>
+											</select>
+										</div>
+										<div class="column">
+											<label for="InputDate1" style="width: 100%">Date</label>
+											<input
+												type="date"
+												id="date"
+												value="2023-01-01"
+												min="2023-12-01"
+												max="2024-12-31"
+												style="width: 100%"
+											/>
+											<small id="dateHelp" class="form-text text-muted"
+												>When are you looking to start.</small
+											>
+										</div>
+										<!-- what plan dropdown, days a week you want to meet, chose a date
+									and time that works for our test class -->
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="Inputbody">Details</label>
+									<textarea
+										class="form-control"
+										id="Inputbody"
+										rows="3"
+									></textarea>
+								</div>
+								<a
+									type="submit"
+									class="btn float-right"
+									id="buttom-default"
+									style="align-self: right"
+									onclick="sendEmail()"
+									>SUBMIT</a
+								>
+							</form>
+						</article>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="section" id="body-contact-information">
+			<div class="container is-fluid">
+				<div class="level is-parent">
+					<div class="level-left is-child">
+						<h4 class="title"></h4>
+					</div>
+					<div class="level-right is-child">
+						<h4 class="subtitle">
+							<p>Don't be a stranger</p>
+							<p><strong class="subtitle">FOR ANY QUESTIONS:</strong></p>
+							<a
+								id="contact-information"
+								class="project-link default"
+								href="mailto: tawareyna@gmail.com"
+								>maldonadofernanda20@gmail.com</a
+							>
+							<!-- <a
+								id="contact-information"
+								class="project-link default"
+								href="https://www.linkedin.com/in/tawa-reyna/"
+								target="_blank"
+								>LinkedIn</a
+							> -->
+						</h4>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>
