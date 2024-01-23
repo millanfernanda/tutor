@@ -80,6 +80,10 @@ function init() {
 	} else {
 		setTimeout(init, 200)
 	}
+
+	var now = new Date()
+	var datetime = now.toLocaleString()
+	document.getElementById('date').value = datetime
 }
 
 setTimeout(init, 200)
