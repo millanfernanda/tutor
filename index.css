@@ -250,6 +250,7 @@ a.project-link.darkmode:hover {
 .level .level-right {
 	padding: 0;
 	float: right;
+	color:#ffffff;
 }
 .hero {
 	padding: 0;
@@ -382,6 +383,7 @@ form {
 	padding-bottom: 3vw;
 	padding-left: 10%;
 	padding-right: 10%;
+	color: #ffffff;
 }
 .buttons-home {
 	padding: 3vw;
