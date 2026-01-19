@@ -198,11 +198,11 @@ tr:nth-child(even) {
 }
 .tab .tablinks {
 	background-color: inherit;
-	float: center;
+	/* float: center;
 	border: none;
-	outline: none;
+	outline: none; */
 	cursor: pointer;
-	padding: 14px 16px;
+	/* padding: 14px 16px; */
 	transition: 0.3s;
 	font-size: 17px;
 }
@@ -357,8 +357,8 @@ form {
 	margin: auto 7vw auto 17vw;
 }
 #get-started-image {
-	margin: 0vw 12vw 0vw 8vw;
-	margin: auto 12vw auto 8vw;
+	margin: 8vw 12vw 8vw 8vw;
+	/* margin: auto 12vw auto 8vw; */
 	padding: 0em;
 }
 
