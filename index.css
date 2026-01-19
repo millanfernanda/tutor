@@ -348,12 +348,12 @@ form {
 #buttom-default {
 	background-color: rgb(255, 255, 255);
 	color: rgb(73, 127, 81);
-	outline: 1vw solid rgb(73, 127, 81);
+	outline: 0.3vw solid rgb(73, 127, 81);
 }
 #buttom-default:hover {
 	background-color: #ffffff;
 	color: rgb(55, 95, 61);
-	outline: 1vw solid rgb(55, 95, 61);
+	outline: 0.3vw solid rgb(55, 95, 61);
 }
 #get-started-section {
 	margin: auto 7vw auto 17vw;
