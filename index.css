@@ -122,7 +122,7 @@ tr:nth-child(even) {
 	padding-bottom: 0.5vw;
 }
 #body-contact-information {
-	background-color: #9d7a57;
+	background-color: #ffffff;
 	color: rgb(255, 255, 255);
 	padding-top: 3vw;
 	padding-bottom: calc(5em + 3vw);
@@ -367,6 +367,9 @@ form {
 	margin: 2vw 12vw 2vw 0vw;
 	/* margin: auto 12vw auto 8vw; */
 	padding: 0em;
+}
+#about-me-section{
+	margin: auto 7vw auto 0vw;
 }
 
 .profile-image {
