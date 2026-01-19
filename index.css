@@ -391,3 +391,6 @@ form {
 #contact-button {
 	text-align: right;
 }
+#dateHelp, #emailHelp {
+	color: rgb(255, 255, 255);
+}
