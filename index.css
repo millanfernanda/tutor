@@ -218,10 +218,10 @@ tr:nth-child(even) {
 	color: rgb(202, 174, 62); 
 } */
 .tab .tablinks.default:hover p {
-	color: #3c639c;
+	color: rgb(73, 127, 81);
 }
 .tab .tablinks.default.active p {
-	color: #3c639c;
+	color: rgb(73, 127, 81);
 }
 /* a #darkmode-button.default {
 	color: rgb(214, 184, 65);
@@ -236,10 +236,10 @@ a #darkmode-button.darkmode:hover {
 	color: rgb(88, 155, 243);
 } */
 a.project-link.default {
-	color: rgb(55, 106, 173);
+	color: rgb(73, 127, 81);
 }
 a.project-link.default:hover {
-	color: rgb(88, 155, 243);
+	color: rgb(55, 95, 61);
 }
 /* a.project-link.darkmode {
 	color: rgb(55, 106, 173);
