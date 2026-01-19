@@ -187,24 +187,24 @@ tr:nth-child(even) {
 	padding: 0;
 }
 .tab {
-	overflow: hidden;
+	/* overflow: hidden; */
 	/* border: 1px solid #ccc; */
 	background-color: rgb(255, 255, 255);
-	margin-top: 1vw;
+	/* margin-top: 1vw; */
 	color: rgb(0, 0, 0);
 }
 #banner {
 	background-color: rgb(255, 255, 255);
 }
 .tab .tablinks {
-	background-color: inherit;
+	/* background-color: inherit;
 	float: center;
 	border: none;
 	outline: none;
 	cursor: pointer;
 	padding: 14px 16px;
 	transition: 0.3s;
-	font-size: 17px;
+	font-size: 17px; */
 }
 /* .tab .tablinks.default:hover {
 	background-color: rgb(243, 242, 239);
