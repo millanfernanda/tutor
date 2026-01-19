@@ -165,6 +165,9 @@ tr:nth-child(even) {
 	text-align: center;
 	color: rgb(0, 0, 0);
 }
+#banner-title .columns {
+    align-items: center;
+}
 #banner .tab {
 	margin-top: 0;
 }
