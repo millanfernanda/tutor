@@ -123,6 +123,7 @@ tr:nth-child(even) {
 }
 #body-contact-information {
 	background-color: #9d7a57;
+	color: rgb(255, 255, 255);
 	padding-top: 3vw;
 	padding-bottom: calc(5em + 3vw);
 	padding-right: 0em;
@@ -383,6 +384,12 @@ form {
 	padding-bottom: 3vw;
 	padding-left: 10%;
 	padding-right: 10%;
+	color: #ffffff;
+}
+#bio-home-details .title{
+	color: #ffffff;
+}
+#bio-home-details .subtitle{
 	color: #ffffff;
 }
 .buttons-home {
