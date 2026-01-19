@@ -346,12 +346,14 @@ form {
 	padding: 3vw;
 }
 #buttom-default {
-	background-color: #3c639c;
-	color: rgb(255, 255, 255);
+	background-color: rgb(255, 255, 255);
+	color: rgb(73, 127, 81);
+	outline: 1vw solid rgb(73, 127, 81);
 }
 #buttom-default:hover {
-	background-color: #5f799f;
-	color: rgb(255, 255, 255);
+	background-color: #ffffff;
+	color: rgb(55, 95, 61);
+	outline: 1vw solid rgb(55, 95, 61);
 }
 #get-started-section {
 	margin: auto 7vw auto 17vw;
