@@ -393,6 +393,7 @@ form {
 	padding-left: 10%;
 	padding-right: 10%;
 	color: #ffffff;
+	background-color: rgb(73, 127, 81);
 }
 /* #bio-home-details .title{
 	color: #ffffff;
@@ -417,18 +418,18 @@ form {
 	margin-top: 0.2vw;
 }
  .drawer-container {
-      background-color: #000;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      background-color: rgb(73, 127, 81);
+      /* padding: 20px; */
+      /* border-radius: 10px; */
+      /* box-shadow: 0 4px 12px rgba(0,0,0,0.3); */
       width: 300px;
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      /* gap: 15px; */
     }
 
     .drawer-button {
-      background-color: #222;
+      background-color: rgb(73, 127, 81);
       color: #fff;
       border: none;
       padding: 15px;
@@ -439,6 +440,6 @@ form {
     }
 
     .drawer-button:hover {
-      background-color: #444;
+      background-color: rgb(55, 95, 61);
     }
 
