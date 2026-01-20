@@ -388,6 +388,7 @@ form {
 }
 .plan-home {
 	background-color: rgb(73, 127, 81);
+	padding-top: 0;
 }
 #bio-home-details {
 	text-align: left;
@@ -396,6 +397,7 @@ form {
 	padding-left: 10%;
 	padding-right: 10%; */
 	color: #ffffff;
+	padding-top: 0;
 	background-color: rgb(73, 127, 81);
 }
 #bio-home-details .columns{
