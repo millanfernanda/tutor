@@ -398,9 +398,10 @@ form {
 	color: #ffffff;
 	background-color: rgb(73, 127, 81);
 }
-/* #bio-home-details .title{
-	color: #ffffff;
-} */
+#bio-home-details .columns{
+	margin: 0;
+	padding: 0;
+}
 #bio-home-details .subtitle{
 	color: #ffffff;
 }
