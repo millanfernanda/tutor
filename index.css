@@ -101,7 +101,7 @@ tr:nth-child(even) {
 	padding: 3vw;
 	border-radius: 1em;
 	/* box-shadow: 2px 2px 2px rgb(70, 70, 70); */
-	background-color: rgb(73, 127, 81);
+	background-color: #5A641E;
 	color: rgb(255, 255, 255);
 }
 .body-form {
@@ -111,7 +111,7 @@ tr:nth-child(even) {
 	padding-top: 1vw;
 	border-radius: 1em;
 	color: rgb(255, 255, 255);
-	background-color: rgb(73, 127, 81);
+	background-color: #5A641E;
 }
 .form-control {
 	background-color: rgb(255, 255, 255);
@@ -219,10 +219,10 @@ tr:nth-child(even) {
 	color: rgb(202, 174, 62); 
 } */
 .tab .tablinks.default:hover p {
-	color: rgb(73, 127, 81);
+	color: #5A641E;
 }
 .tab .tablinks.default.active p {
-	color: rgb(73, 127, 81);
+	color: #5A641E;
 }
 /* a #darkmode-button.default {
 	color: rgb(214, 184, 65);
@@ -237,10 +237,10 @@ a #darkmode-button.darkmode:hover {
 	color: rgb(88, 155, 243);
 } */
 a.project-link.default {
-	color: rgb(73, 127, 81);
+	color: #5A641E;
 }
 a.project-link.default:hover {
-	color: rgb(55, 95, 61);
+	color: #849532;
 }
 /* a.project-link.darkmode {
 	color: rgb(55, 106, 173);
@@ -352,13 +352,13 @@ form {
 }
 #buttom-default {
 	background-color: rgb(255, 255, 255);
-	color: rgb(73, 127, 81);
-	outline: 0.3vw solid rgb(73, 127, 81);
+	color: #5A641E;
+	outline: 0.3vw solid #5A641E;
 }
 #buttom-default:hover {
 	background-color: #ffffff;
-	color: rgb(55, 95, 61);
-	outline: 0.3vw solid rgb(55, 95, 61);
+	color: #849532;
+	outline: 0.3vw solid #849532;
 }
 #get-started-section {
 	margin: auto 7vw auto 17vw;
@@ -387,7 +387,7 @@ form {
 	background-color: #9d7a57;
 }
 .plan-home {
-	background-color: rgb(73, 127, 81);
+	background-color: #5A641E;
 	padding-top: 0;
 }
 #bio-home-details {
@@ -398,7 +398,7 @@ form {
 	padding-right: 10%; */
 	color: #ffffff;
 	padding-top: 0;
-	background-color: rgb(73, 127, 81);
+	background-color: #5A641E;
 }
 #bio-home-details .columns{
 	margin: 0;
@@ -424,7 +424,7 @@ form {
 	margin-top: 0.2vw;
 }
  .drawer-container {
-      background-color: rgb(73, 127, 81);
+      background-color: #5A641E;
       /* padding: 20px; */
       /* border-radius: 10px; */
       /* box-shadow: 0 4px 12px rgba(0,0,0,0.3); */
@@ -435,7 +435,7 @@ form {
     }
 
     .drawer-button {
-		background-color: rgb(73, 127, 81);
+		background-color: #5A641E;
 		color: #fff;
 		border: none;
 		padding: 15px;
@@ -446,6 +446,6 @@ form {
     }
 
     .drawer-button:hover {
-      background-color: rgb(55, 95, 61);
+      background-color: #849532;
     }
 
