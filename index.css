@@ -386,12 +386,15 @@ form {
 .bio-home {
 	background-color: #9d7a57;
 }
+.plan-home {
+	background-color: rgb(73, 127, 81);
+}
 #bio-home-details {
-	text-align: center;
-	padding-top: 3vw;
+	text-align: left;
+	/* padding-top: 3vw;
 	padding-bottom: 3vw;
 	padding-left: 10%;
-	padding-right: 10%;
+	padding-right: 10%; */
 	color: #ffffff;
 	background-color: rgb(73, 127, 81);
 }
@@ -429,14 +432,14 @@ form {
     }
 
     .drawer-button {
-      background-color: rgb(73, 127, 81);
-      color: #fff;
-      border: none;
-      padding: 15px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
+		background-color: rgb(73, 127, 81);
+		color: #fff;
+		border: none;
+		padding: 15px;
+    	border-radius: 5px;
+		text-align: left;
+		cursor: pointer;
+		transition: background-color 0.3s ease;
     }
 
     .drawer-button:hover {
