@@ -101,7 +101,7 @@ tr:nth-child(even) {
 	padding: 3vw;
 	border-radius: 1em;
 	/* box-shadow: 2px 2px 2px rgb(70, 70, 70); */
-	background-color: #ADC26B;
+	background-color: #5A641E;
 	color: rgb(255, 255, 255);
 }
 .body-form {
@@ -111,7 +111,7 @@ tr:nth-child(even) {
 	padding-top: 1vw;
 	border-radius: 1em;
 	color: rgb(255, 255, 255);
-	background-color: #ADC26B;
+	background-color: #5A641E;
 }
 .form-control {
 	background-color: rgb(255, 255, 255);
@@ -219,10 +219,10 @@ tr:nth-child(even) {
 	color: rgb(202, 174, 62); 
 } */
 .tab .tablinks.default:hover p {
-	color: #ADC26B;
+	color: #5A641E;
 }
 .tab .tablinks.default.active p {
-	color: #ADC26B;
+	color: #5A641E;
 }
 /* a #darkmode-button.default {
 	color: rgb(214, 184, 65);
@@ -237,7 +237,7 @@ a #darkmode-button.darkmode:hover {
 	color: rgb(88, 155, 243);
 } */
 a.project-link.default {
-	color: #ADC26B;
+	color: #5A641E;
 }
 a.project-link.default:hover {
 	color: #849532;
@@ -352,8 +352,8 @@ form {
 }
 #buttom-default {
 	background-color: rgb(255, 255, 255);
-	color: #ADC26B;
-	outline: 0.3vw solid #ADC26B;
+	color: #5A641E;
+	outline: 0.3vw solid #5A641E;
 }
 #buttom-default:hover {
 	background-color: #ffffff;
@@ -384,10 +384,10 @@ form {
 	text-align: center;
 }
 .bio-home {
-	background-color: #ADC26B;
+	background-color: #5A641E;
 }
 .plan-home {
-	background-color: #ADC26B;
+	background-color: #5A641E;
 	padding: 0;
 }
 #bio-home-details {
@@ -398,7 +398,7 @@ form {
 	padding-right: 10%; */
 	color: #ffffff;
 	padding: 0;
-	background-color: #ADC26B;
+	background-color: #5A641E;
 }
 #bio-home-details .columns{
 	margin: 0;
@@ -424,7 +424,7 @@ form {
 	margin-top: 0.2vw;
 }
  .drawer-container {
-      background-color: #ADC26B;
+      background-color: #5A641E;
       padding: 0px;
       width: 100%;
       display: flex;
@@ -432,7 +432,7 @@ form {
     }
 
     .drawer-button {
-		background-color: #ADC26B;
+		background-color: #5A641E;
 		color: #fff;
 		border-bottom: 0.3vw solid white;
 		padding: 15px;
