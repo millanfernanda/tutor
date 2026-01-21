@@ -440,7 +440,7 @@ form {
 		border-bottom: 0.3vw solid white;
 		padding: 15px;
     	border-radius: 5px;
-		text-align: left;
+		text-align: center;
 		cursor: pointer;
 		transition: background-color 0.3s ease;
     }
