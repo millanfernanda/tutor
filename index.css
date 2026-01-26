@@ -104,9 +104,9 @@ tr:nth-child(even) {
 	background-color: #587042;
 	color: rgb(255, 255, 255);
 }
-.body-information .subtitle{
+/* .body-information .subtitle{
 	color: rgb(255, 255, 255);
-}
+} */
 .body-form {
 	padding-bottom: calc(1vw + 2em);
 	padding-left: 1vw;
