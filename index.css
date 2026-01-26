@@ -384,10 +384,10 @@ form {
 	text-align: center;
 }
 .bio-home {
-	background-color: #5A641E;
+	background-color: #909A78;
 }
 .plan-home {
-	background-color: #5A641E;
+	background-color: #909A78;
 	padding: 0;
 }
 #bio-home-details {
@@ -398,7 +398,7 @@ form {
 	padding-right: 10%; */
 	color: #ffffff;
 	padding: 0;
-	background-color: #5A641E;
+	background-color: #909A78;
 }
 #bio-home-details .columns{
 	margin: 0;
@@ -424,7 +424,7 @@ form {
 	margin-top: 0.2vw;
 }
  .drawer-container {
-      background-color: #5A641E;
+      background-color: #909A78;
       padding: 0px;
       width: 100%;
       display: flex;
@@ -432,7 +432,7 @@ form {
     }
 
     .drawer-button {
-		background-color: #5A641E;
+		background-color: #909A78;
 		color: #fff;
 		border-bottom: 0.1vw solid white;
 		padding: 15px;
