@@ -465,4 +465,8 @@ form {
 		margin: 2vw 20vw 2vw 20vw;
 		padding: 0em;
 	}
+	#get-started-section {
+		margin: auto 7vw auto 7vw;
+		text-align:center;
+	}
 }
