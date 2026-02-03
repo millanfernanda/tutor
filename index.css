@@ -221,6 +221,9 @@ tr:nth-child(even) {
 	background-color: rgb(243, 242, 239);
 	color: rgb(202, 174, 62); 
 } */
+.tablinks p {
+	font-size: 1rem;
+}
 .tab .tablinks.default:hover p {
 	color: #587042;
 }
