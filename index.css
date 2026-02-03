@@ -455,23 +455,11 @@ form {
 		padding-right: 5vw;
 	}
 	#about-me-image {
-		margin: 2vw auto;
-	}
-	#get-started-section {
-		margin: auto 5vw;
-		text-align: center;
+		margin: 2vw 20vw 2vw 20vw;
+		padding: 0em;
 	}
 	#get-started-image {
-		margin: 2vw auto;
-	}
-	#about-me-section {
-		margin: auto 5vw;
-		text-align: center;
-	}
-	#home-tab,
-	#experience-tab,
-	#contact-tab {
-		padding-left: calc(0.5rem + 0.5vw);
-		padding-right: calc(0.5rem + 0.5vw);
+		margin: 2vw 20vw 2vw 20vw;
+		padding: 0em;
 	}
 }
