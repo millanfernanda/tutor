@@ -101,7 +101,7 @@ tr:nth-child(even) {
 	padding: 3vw;
 	border-radius: 1em;
 	/* box-shadow: 2px 2px 2px rgb(70, 70, 70); */
-	background-color: #587042;
+	background-color: #4d82bc;
 	color: rgb(255, 255, 255);
 }
 /* .body-information .subtitle{
@@ -114,7 +114,7 @@ tr:nth-child(even) {
 	padding-top: 1vw;
 	border-radius: 1em;
 	color: rgb(255, 255, 255);
-	background-color: #587042;
+	background-color: #4d82bc;
 }
 .form-control {
 	background-color: rgb(255, 255, 255);
@@ -225,10 +225,10 @@ tr:nth-child(even) {
 	font-size: 1rem;
 }
 .tab .tablinks.default:hover p {
-	color: #587042;
+	color: #005187;
 }
 .tab .tablinks.default.active p {
-	color: #587042;
+	color: #005187;
 }
 /* a #darkmode-button.default {
 	color: rgb(214, 184, 65);
@@ -243,10 +243,10 @@ a #darkmode-button.darkmode:hover {
 	color: rgb(88, 155, 243);
 } */
 a.project-link.default {
-	color: #587042;
+	color: #005187;
 }
 a.project-link.default:hover {
-	color: #909A78;
+	color: #c4dafa;
 }
 /* a.project-link.darkmode {
 	color: rgb(55, 106, 173);
@@ -358,13 +358,13 @@ form {
 }
 #buttom-default {
 	background-color: rgb(255, 255, 255);
-	color: #587042;
-	outline: 0.3vw solid #587042;
+	color: #005187;
+	outline: 0.3vw solid #005187;
 }
 #buttom-default:hover {
 	background-color: #ffffff;
-	color: #909A78;
-	outline: 0.3vw solid #909A78;
+	color: #c4dafa;
+	outline: 0.3vw solid #c4dafa;
 }
 #get-started-section {
 	margin: auto 7vw auto 17vw;
@@ -390,10 +390,10 @@ form {
 	text-align: center;
 }
 .bio-home {
-	background-color: #909A78;
+	background-color: #c4dafa;
 }
 .plan-home {
-	background-color: #587042;
+	background-color: #005187;
 	padding: 0;
 }
 #bio-home-details {
@@ -404,7 +404,7 @@ form {
 	padding-right: 10%; */
 	color: #ffffff;
 	padding: 0;
-	background-color: #587042;
+	background-color: #005187;
 }
 #bio-home-details .columns{
 	margin: 0;
@@ -430,7 +430,7 @@ form {
 	margin-top: 0.2vw;
 }
  .drawer-container {
-      background-color: #587042;
+      background-color: #005187;
       padding: 0px;
       width: 100%;
       display: flex;
@@ -438,7 +438,7 @@ form {
     }
 
     .drawer-button {
-		background-color: #587042;
+		background-color: #005187;
 		color: #fff;
 		border-bottom: 0.1vw solid white;
 		padding: 15px;
@@ -449,7 +449,7 @@ form {
     }
 
     .drawer-button:hover {
-      background-color: #909A78;
+      background-color: #c4dafa;
     }
 
 @media screen and (max-width: 768px) {
