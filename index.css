@@ -101,7 +101,7 @@ tr:nth-child(even) {
 	padding: 3vw;
 	border-radius: 1em;
 	/* box-shadow: 2px 2px 2px rgb(70, 70, 70); */
-	background-color: #005187;
+	background-color: #4d82bc;
 	color: rgb(255, 255, 255);
 }
 /* .body-information .subtitle{
@@ -114,7 +114,7 @@ tr:nth-child(even) {
 	padding-top: 1vw;
 	border-radius: 1em;
 	color: rgb(255, 255, 255);
-	background-color: #005187;
+	background-color: #4d82bc;
 }
 .form-control {
 	background-color: rgb(255, 255, 255);
@@ -246,7 +246,7 @@ a.project-link.default {
 	color: #005187;
 }
 a.project-link.default:hover {
-	color: #c4dafa;
+	color: #4d82bc;
 }
 /* a.project-link.darkmode {
 	color: rgb(55, 106, 173);
@@ -363,8 +363,8 @@ form {
 }
 #buttom-default:hover {
 	background-color: #ffffff;
-	color: #c4dafa;
-	outline: 0.3vw solid #c4dafa;
+	color: #4d82bc;
+	outline: 0.3vw solid #4d82bc;
 }
 #get-started-section {
 	margin: auto 7vw auto 17vw;
@@ -390,7 +390,7 @@ form {
 	text-align: center;
 }
 .bio-home {
-	background-color: #005187;
+	background-color: #4d82bc;
 }
 .plan-home {
 	background-color: #005187;
@@ -449,7 +449,7 @@ form {
     }
 
     .drawer-button:hover {
-      background-color: #c4dafa;
+      background-color: #4d82bc;
     }
 
 @media screen and (max-width: 768px) {
