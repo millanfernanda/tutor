@@ -11,9 +11,11 @@
 
 .title {
 	font-size: calc(0.9rem + 1.1vw);
+	color: #001f33;
 }
 .subtitle {
 	font-size: calc(0.7rem + 0.5vw);
+	color: #001f33;
 }
 body {
 	font-size: calc(0.7rem + 0.5vw);
@@ -154,6 +156,7 @@ tr:nth-child(even) {
 	border-top-right-radius: 1em;
 	border-top-left-radius: 1em;
 	margin: 0;
+	color:#001f33;
 	/* width: 33%; */
 	/* height: 100%; */
 }
@@ -167,7 +170,7 @@ tr:nth-child(even) {
 } */
 #banner-title .is-child {
 	text-align: center;
-	color: rgb(0, 0, 0);
+	color: #001f33;
 }
 #banner-title .columns {
     align-items: center;
@@ -198,7 +201,7 @@ tr:nth-child(even) {
 	/* border: 1px solid #ccc; */
 	background-color: rgb(255, 255, 255);
 	/* margin-top: 1vw; */
-	color: rgb(0, 0, 0);
+	color: #001f33;
 }
 #banner {
 	background-color: rgb(255, 255, 255);
@@ -298,7 +301,7 @@ a.project-link.darkmode:hover {
 	padding-top: 70px;
 	padding-bottom: 50px;
 	margin: auto;
-	background-color: rgb(0, 0, 0);
+	background-color: #001f33;
 	background-color: rgba(0, 0, 0, 0.9);
 }
 .modal-content {
