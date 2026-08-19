@@ -1,20 +1,64 @@
-let lastKnownScrollPosition = 0
 let ticking = false
 
-function tabsPage(event, tabOption) {
-	sessionStorage.setItem('event', tabOption + '-tab')
+/* ---------------------------- navigation ---------------------------- */
 
-	tabcontent = document.getElementsByClassName('tabcontent')
-	for (i = 0; i < tabcontent.length; i++) {
-		tabcontent[i].style.display = 'none'
+function scrollToSection(id) {
+	let target = document.getElementById(id)
+	if (target) {
+		target.scrollIntoView({ behavior: 'smooth', block: 'start' })
 	}
-	tablinks = document.getElementsByClassName('tablinks')
-	for (i = 0; i < tablinks.length; i++) {
-		tablinks[i].className = tablinks[i].className.replace(' active', '')
-	}
-	event.currentTarget.className += ' active'
-	document.getElementById(tabOption).style.display = 'block'
 }
+
+/* plan cards + the two call-to-action buttons.
+   passing a level also preselects it in the contact form. */
+function buttonClick(pointer, level = null) {
+	if (level) {
+		let select = document.getElementById('level')
+		if (select) {
+			select.value = level
+		}
+	}
+	scrollToSection(pointer)
+}
+
+/* lights up the nav link for whichever section is on screen */
+function highlightNav() {
+	let links = document.querySelectorAll('.navlink')
+	let marker = window.scrollY + 160
+	let currentId = 'home'
+
+	links.forEach(function (link) {
+		let id = link.getAttribute('href').slice(1)
+		let section = document.getElementById(id)
+		if (section && section.offsetTop <= marker) {
+			currentId = id
+		}
+	})
+
+	// at the very bottom of the page, always light the last section
+	if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 4) {
+		currentId = 'contact'
+	}
+
+	links.forEach(function (link) {
+		if (link.getAttribute('href') === '#' + currentId) {
+			link.classList.add('active')
+		} else {
+			link.classList.remove('active')
+		}
+	})
+}
+
+function onScroll() {
+	if (ticking) return
+	ticking = true
+	window.requestAnimationFrame(function () {
+		highlightNav()
+		ticking = false
+	})
+}
+
+/* ------------------------------ email ------------------------------ */
 
 function sendEmail() {
 	let email = document.getElementById('email').value
@@ -50,40 +94,22 @@ function sendEmail() {
 		.catch((err) => console.log(err))
 }
 
-function buttonClick(pointer, level = null) {
-	if (pointer === 'contact') {
-		let tabId = 'contact-tab'
-		let temp = document.getElementById(tabId)
-		temp.click()
-		if (level) {
-			console.log(level)
-			document.getElementById('level').value = level
-			console.log(document.getElementById('level').value)
-		}
-	} else if (pointer === 'experience') {
-		let tabId = 'experience-tab'
-		let temp = document.getElementById(tabId)
-		temp.click()
-	}
-}
+/* ------------------------------- init ------------------------------- */
 
 function init() {
-	console.log('INIT')
-	let tabId = sessionStorage.getItem('event')
-	console.log(tabId)
-	if (tabId == null) {
-		tabId = 'home-tab'
-	}
-	let temp = document.getElementById(tabId)
-	if (temp) {
-		temp.click()
-	} else {
-		setTimeout(init, 200)
+	// default the date field to today (<input type="date"> needs YYYY-MM-DD)
+	var now = new Date()
+	var today = new Date(now.getTime() - now.getTimezoneOffset() * 60000)
+		.toISOString()
+		.slice(0, 10)
+	var dateField = document.getElementById('date')
+	if (dateField) {
+		dateField.value = today
+		dateField.min = today
 	}
 
-	var now = new Date()
-	var datetime = now.toLocaleString()
-	document.getElementById('date').value = datetime
+	window.addEventListener('scroll', onScroll, { passive: true })
+	highlightNav()
 }
 
-setTimeout(init, 200)
+document.addEventListener('DOMContentLoaded', init)

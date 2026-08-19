@@ -1,376 +1,216 @@
 <!DOCTYPE html>
-<head>
-	<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
-	<script src="index.js"></script>
-	<!-- <script src="importScripts.html"></script> -->
-	<script
-		src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-		crossorigin="anonymous"
-	></script>
-	<script
-		src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-		crossorigin="anonymous"
-	></script>
-	<script
-		src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-		crossorigin="anonymous"
-	></script>
-	<link
-		rel="stylesheet"
-		href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-		crossorigin="anonymous"
-	/>
-	<base href="[[=URL('static')]]/" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-	/>
-	<link
-		rel="stylesheet"
-		href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.5.1/css/bulma.min.css"
-	/>
-	<script src="https://smtpjs.com/v3/smtp.js"></script>
-
-	<script
-		type="text/javascript"
-		src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
-	></script>
-	<script type="text/javascript">
-		;(function () {
-			emailjs.init('nJOnTohF3872Ebg4y')
-		})()
-	</script>
-</head>
 <html lang="en">
-	<body id="darkmode">
-		<div id="banner" class="hero">
-			<div id="banner-title" class="is-parent">
-				<div class="is-child">
-					<h1 class="title" style="color: #001f33;">Fernanda Maldonado</h1>
-				</div>
-				<div class="is-child tab columns is-centered is-mobile" style="font-size: 1.2rem;">
-					<a
-						class="tablinks title default"
-						onclick="tabsPage(event, 'home')"
-						id="home-tab"
-						><p>HOME</p></a
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Fernanda Maldonado &mdash; Spanish Tutor</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&family=Saira+Condensed:wght@900&family=JetBrains+Mono:wght@400..700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+		<script src="index.js"></script>
+
+		<script
+			type="text/javascript"
+			src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+		></script>
+		<script type="text/javascript">
+			;(function () {
+				emailjs.init('nJOnTohF3872Ebg4y')
+			})()
+		</script>
+	</head>
+	<body>
+		<header class="nav">
+			<div class="nav-pill">
+				<a class="nav-home navlink" href="#home" aria-label="Home">
+					<svg
+						viewBox="0 0 24 24"
+						fill="none"
+						stroke="currentColor"
+						stroke-width="2.2"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+						aria-hidden="true"
 					>
-					<a
-						class="tablinks title default"
-						onclick="tabsPage(event, 'experience')"
-						id="experience-tab"
-						><p>EXPERIENCE</p></a
-					>
-					<a
-						class="tablinks title default"
-						onclick="tabsPage(event, 'contact')"
-						id="contact-tab"
-						><p>CONTACT ME</p></a
-					>
+						<circle cx="12" cy="6.3" r="4.2"></circle>
+						<path d="M12 10.5V21.4"></path>
+						<path d="M12 15.4H7.7"></path>
+						<path d="M12 19.2H8.6"></path>
+					</svg>
+				</a>
+				<div class="nav-links">
+					<span class="nav-rule"></span>
+					<a class="navlink" href="#about">ABOUT</a>
+					<a class="navlink" href="#experience">EXPERIENCE</a>
+					<a class="navlink" href="#contact">CONTACT</a>
 				</div>
 			</div>
-		</div>
-		<!-- <div id="line"></div> -->
-		<div id="myModal" class="modal">
-			<span onclick="closeImage(event)" class="modal-close-img">&times;</span>
-			<img class="modal-content" id="modal-img" />
-			<div id="modal-caption"></div>
-		</div>
-		<section class="section tabcontent" id="home">
-			<div class="background-home">
-				<!--<div class="container-body">
-					<div id="background-home"> -->
-				<div class="columns">
-					<div class="column is-one-half" id="get-started-section">
-						<div class="title" style="color: #001f33;">
-							Spanish tutor: <br />
-							Unlock your potential
+		</header>
+
+		<!-- ============================== HERO ============================== -->
+		<section id="home">
+			<div class="hero">
+				<div class="hero-copy">
+					<div class="hero-title-fit">
+						<h1 class="hero-title">SPANISH<br />TUTOR</h1>
+					</div>
+					<div class="hero-stack">
+						<div class="hero-lines">
+							<div class="hero-lead">Unlock Your Potential</div>
+							<div class="hero-name">with Fernanda Maldonado</div>
 						</div>
-						<div style="color: rgb(255, 255, 255)">
-							<a
-								class="btn"
-								id="buttom-default"
-								style="color: #001f33;"
-								onclick="buttonClick('contact')"
-								>GET STARTED NOW</a
-							>
-						</div>
-					</div>
-					<div class="column is-one-half" id="get-started-image">
-						<figure class="image">
-							<img class="profile-image" src="../images/IMG_1.jpeg" />
-						</figure>
+						<a class="btn-pill" href="#contact"
+							>GET STARTED NOW <span class="btn-arrow">&#8595;</span></a
+						>
 					</div>
 				</div>
-			</div>
-			<!--</div>
-			</div> -->
-			<div class="plan-home">
-				<!-- <div class="container is-fluid"> -->
-					<div
-						class="container-body"
-						id="bio-home-details"
-					>
-						<!-- <div class="columns">
-							<div class="column is-one-half">
-								<div>
-									<h1 class="title">Plans</h1>
-								</div>
-							</div>
-							<div class="column is-one-half"> -->
-								<div class="drawer-container">
-									<a class="drawer-button"  class="title" onclick="buttonClick('contact', 'Beginner')">Beginner Plan (A1/A2)</a>
-									<a class="drawer-button" onclick="buttonClick('contact', 'Intermediate')">Intermediate Plan (B1/B2)</a>
-									<a class="drawer-button" onclick="buttonClick('contact', 'Advanced')">Advanced Plan (C1/C2)</a>
-								</div>
-								
-							<!-- </div>
-						</div> -->
-						<!-- <div id="plan-body"></div> -->
-					</div>
-				<!-- </div> -->
-			</div>
-			<div class="bio-home">
-				<div class="container is-fluid">
-					<div class="container-body"> 
-						<!-- <div id="bio-home-details">
-							<h1 class="title">About Me</h1>
-							<h3 class="subtitle">
-								I am a native spanish speaker and am fluent in english. I am a
-								fan of nature and cats. I am a curious person, like to learn and
-								share my knowledge. I have many years of experience with
-								tutoring and customer service, which I believe has allowed me to
-								interact and handle all types of people of all ages.
-							</h3>
-						</div> -->
-						<div class="columns">
-							<div class="column is-one-third" id="about-me-image">
-								<figure class="image">
-									<img class="profile-image" src="../images/IMG_2.jpeg" />
-								</figure>
-							</div>
-							<div class="column is-one-half" id="about-me-section">
-								<div class="title" style="color:#001f33">
-									About Me
-								</div>
-								<div style="color: #001f33; font-size: 1.2rem;">
-									I&rsquo;m a native Spanish speaker passionate about literature,
-									culture, and meaningful human connections. As a curious learner
-									myself, I design dynamic, tailored spaces where learning Spanish
-									feels natural, engaging, and directly connected to your real
-									life. I focus on helping you gain true conversational
-									confidence, moving beyond rigid grammar and into authentic,
-									fluent communication.
-								</div>
-							</div>
-						</div>
-					</div>
+				<div class="hero-img">
+					<img src="images/IMG_1.jpeg" alt="Fernanda Maldonado" />
 				</div>
-			</div>
-			
-			<!-- <div class="container is-fluid">
-				<div class="container-body">
-					<div class="buttons-home">
-						<div class="columns">
-							<div class="column is-one-half" id="button-home-details">
-								<div class="title">Learn more</div>
-								<div>
-									<a class="btn" id="buttom-default" onclick="buttonClick('experience')"
-										>CLICK HERE</a
-									>
-								</div>
-							</div>
-							<div class="column is-one-half" id="button-home-details">
-								<div class="title">Contact me</div>
-								<div>
-									<a class="btn" id="buttom-default" onclick="buttonClick('contact')"
-										>CLICK HERE</a
-									>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div> -->
-		</section>
-		<section class="tabcontent" id="experience">
-			<div class="container is-fluid">
-				<div class="container-title">
-					<!-- <h2 class="title header">Work Experience</h2> -->
-				</div>
-				<div class="container-body">
-					<div
-						class="tile is-parent is-vertical"
-						style="
-							padding-left: calc(25% - 3em);
-							padding-right: calc(25% - 3em);
-						"
-					>
-						<article class="body-information" class="tile is-child">
-							<h3 class="subtitle" style="color: rgb(255, 255, 255)">
-								I am confident that with my experience and knowledge we can get
-								you to your spanish speaking goals.
-							</h3>
-							<h3 class="subtitle" style="margin: 0em; color: #84b6f4">Teaching Approach</h3>
-							<ul>
-								<li>
-									With years of teaching experience, I recognize that every
-									student has unique goals, interests, and ways of learning. I
-									craft personalized lesson plans designed specifically for you,
-									ensuring every session is interactive, effective, and aligned
-									with what you actually want to achieve.
-								</li>
-							</ul>
-							<h3 class="subtitle" style="margin: 0em; color: #84b6f4">Communication &amp; Adaptability</h3>
-							<ul>
-								<li>
-									My extensive experience working closely with diverse people has
-									shaped my teaching style: patient, highly adaptable, and deeply
-									intuitive. I cultivate a supportive space where you feel
-									comfortable making mistakes, practice naturally, and build
-									lasting confidence at your own rhythm.
-								</li>
-							</ul>
-							<div id="contact-button">
-								<a
-									class="btn"
-									id="buttom-default"
-									onclick="buttonClick('contact')"
-									>SCHEDULE A MEETING</a
-								>
-							</div>
-						</article>
-					</div>
-				</div>
-				<br />
 			</div>
 		</section>
 
-		<section class="tabcontent" id="contact">
-			<div class="container is-fluid">
-				<div class="container-title">
-					<!-- <h2 class="title header">Contact me</h2> -->
+		<!-- ============================== PLANS ============================== -->
+		<section class="wrap plans-wrap">
+			<div class="plans">
+				<a class="plan-card" onclick="buttonClick('contact', 'Beginner')">
+					<span class="plan-num">01</span>
+					<span class="plan-name">Beginner Plan</span>
+					<span class="plan-level">(A1/A2)</span>
+				</a>
+				<a class="plan-card" onclick="buttonClick('contact', 'Intermediate')">
+					<span class="plan-num">02</span>
+					<span class="plan-name">Intermediate Plan</span>
+					<span class="plan-level">(B1/B2)</span>
+				</a>
+				<a class="plan-card" onclick="buttonClick('contact', 'Advanced')">
+					<span class="plan-num">03</span>
+					<span class="plan-name">Advanced Plan</span>
+					<span class="plan-level">(C1/C2)</span>
+				</a>
+			</div>
+		</section>
+
+		<!-- ============================== ABOUT ============================== -->
+		<section class="wrap about-wrap" id="about">
+			<div class="split split-about">
+				<h2 class="big-head sticky-head">About Me</h2>
+				<div class="split-body">
+					<p class="lead-copy">
+						I&rsquo;m a native Spanish speaker passionate about literature,
+						culture, and meaningful human connections. As a curious learner
+						myself, I design dynamic, tailored spaces where learning Spanish
+						feels natural, engaging, and directly connected to your real life. I
+						focus on helping you gain true conversational confidence, moving
+						beyond rigid grammar and into authentic, fluent communication.
+					</p>
 				</div>
-				<div class="container-body">
-					<div
-						class="tile is-parent is-vertical"
-						style="
-							padding-left: calc(25% - 3em);
-							padding-right: calc(25% - 3em);
-						"
+			</div>
+		</section>
+
+		<!-- ============================== BAND ============================== -->
+		<section class="band">
+			<div class="wrap band-wrap">
+				<p class="band-copy">
+					I am confident that with my experience and knowledge we can get you to
+					your <span class="gold">spanish speaking goals.</span>
+				</p>
+			</div>
+		</section>
+
+		<!-- ============================ EXPERIENCE ============================ -->
+		<section class="wrap exp-wrap" id="experience">
+			<div class="eyebrow">EXPERIENCE</div>
+			<div class="exp-list">
+				<div class="split exp-row">
+					<h3 class="mid-head">Teaching Approach</h3>
+					<p class="body-copy">
+						With years of teaching experience, I recognize that every student has
+						unique goals, interests, and ways of learning. I craft personalized
+						lesson plans designed specifically for you, ensuring every session is
+						interactive, effective, and aligned with what you actually want to
+						achieve.
+					</p>
+				</div>
+				<div class="split exp-row">
+					<h3 class="mid-head">Communication &amp; Adaptability</h3>
+					<p class="body-copy">
+						My extensive experience working closely with diverse people has
+						shaped my teaching style: patient, highly adaptable, and deeply
+						intuitive. I cultivate a supportive space where you feel comfortable
+						making mistakes, practice naturally, and build lasting confidence at
+						your own rhythm.
+					</p>
+				</div>
+			</div>
+			<div class="exp-cta">
+				<a class="btn-pill" href="#contact"
+					>SCHEDULE A MEETING <span class="btn-arrow">&#8595;</span></a
+				>
+			</div>
+		</section>
+
+		<!-- ============================== CONTACT ============================== -->
+		<section class="wrap contact-wrap" id="contact">
+			<div class="split split-contact">
+				<h2 class="big-head">SCHEDULE A MEETING</h2>
+				<form class="form" onsubmit="sendEmail(); return false;">
+					<div class="field">
+						<label class="field-label" for="name">NAME</label>
+						<input class="field-input" type="text" id="name" />
+					</div>
+					<div class="field">
+						<label class="field-label" for="email">EMAIL ADDRESS</label>
+						<input class="field-input" type="email" id="email" />
+						<span class="field-help"
+							>We will never share your email with any third party.</span
+						>
+					</div>
+					<div class="field-row">
+						<div class="field">
+							<label class="field-label" for="level">LEVEL</label>
+							<select class="field-input field-select" id="level">
+								<option value="">Select one</option>
+								<option value="Beginner">Beginner</option>
+								<option value="Intermediate">Intermediate</option>
+								<option value="Advanced">Advanced</option>
+							</select>
+						</div>
+						<div class="field">
+							<label class="field-label" for="date">DATE</label>
+							<input class="field-input field-date" type="date" id="date" />
+							<span class="field-help">When are you looking to start.</span>
+						</div>
+					</div>
+					<div class="field">
+						<label class="field-label" for="Inputbody">DETAILS</label>
+						<textarea
+							class="field-input field-area"
+							id="Inputbody"
+							rows="4"
+						></textarea>
+					</div>
+					<button class="btn-pill btn-submit" type="submit">SUBMIT</button>
+				</form>
+			</div>
+		</section>
+
+		<footer class="footer">
+			<div class="wrap footer-wrap">
+				<h2 class="footer-head">Don&rsquo;t be a stranger</h2>
+				<div class="footer-row">
+					<span class="footer-eyebrow">FOR ANY QUESTIONS:</span>
+					<a class="footer-mail" href="mailto:maldonadofernanda20@gmail.com"
+						>maldonadofernanda20@gmail.com</a
 					>
-						<article class="body-form" class="tile is-child">
-							<form>
-								<div class="form-group">
-									<label for="Inputname1">Name</label>
-									<input
-										id="name"
-										type="name"
-										class="form-control"
-										placeholder="Name"
-									/>
-								</div>
-								<div class="form-group">
-									<label for="InputEmail1">Email address</label>
-									<input
-										type="email"
-										id="email"
-										class="form-control"
-										aria-describedby="emailHelp"
-										placeholder="Enter email"
-									/>
-									<small id="emailHelp" class="form-text"
-										>We will never share your email with any third party.</small
-									>
-								</div>
-								<div class="form-group">
-									<div class="columns">
-										<div class="column is-one-half">
-											<label for="InputLevel1">Level</label>
-											<select
-												id="level"
-												class="form-select form-select-lg mb-3 form-control"
-												aria-label=".form-select-lg example"
-											>
-												<option selected>Select one</option>
-												<option value="Beginner">Beginner</option>
-												<option value="Intermediate">Intermediate</option>
-												<option value="Advanced">Advanced</option>
-											</select>
-										</div>
-										<div class="column">
-											<label for="InputDate1" style="width: 100%">Date</label>
-											<input
-												type="date"
-												id="date"
-												value="2024-01-01"
-												min="2024-01-01"
-												max="2024-12-31"
-												style="width: 100%"
-											/>
-											<small id="dateHelp" class="form-text"
-												>When are you looking to start.</small
-											>
-										</div>
-										<!-- what plan dropdown, days a week you want to meet, chose a date
-									and time that works for our test class -->
-									</div>
-								</div>
-								<div class="form-group">
-									<label for="Inputbody">Details</label>
-									<textarea
-										class="form-control"
-										id="Inputbody"
-										rows="3"
-									></textarea>
-								</div>
-								<a
-									type="submit"
-									class="btn float-right"
-									id="buttom-default"
-									style="align-self: right"
-									onclick="sendEmail()"
-									>SUBMIT</a
-								>
-							</form>
-						</article>
-					</div>
 				</div>
 			</div>
-		</section>
-		<section style="background-color: #005187; padding-top: 1em; padding-bottom: 1em;">
-			<div class="container is-fluid">
-				<div class="level is-parent">
-					<div class="level-left is-child">
-						<h4 class="title"></h4>
-					</div>
-					<div class="level-right is-child">
-						<h4 class="subtitle">
-							<p style="padding-left:5px; color: white">Don't be a stranger</p>
-							<p><strong class="subtitle" style="color: white">FOR ANY QUESTIONS:</strong></p>
-							<a
-								id="contact-information"
-								class="project-link default"
-								href="mailto: maldonadofernanda20@gmail.com"
-								>maldonadofernanda20@gmail.com</a
-							>
-							<!-- <a
-								id="contact-information"
-								class="project-link default"
-								href="https://www.linkedin.com/in/tawa-reyna/"
-								target="_blank"
-								>LinkedIn</a
-							> -->
-						</h4>
-					</div>
-				</div>
-			</div>
-		</section>
+		</footer>
 	</body>
 </html>
