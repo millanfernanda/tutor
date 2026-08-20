@@ -3,14 +3,17 @@
    ============================================================ */
 
 :root {
-	--paper: #f2d285;
-	--card: #f0c667;
+	/* Saturated gold ramp: same hues and lightness as before, ~19 saturation
+	   points higher. --paper hsl(40 100% 73%), --card hsl(40 100% 66%),
+	   --acc hsl(40 68% 47%). */
+	--paper: #ffd177;
+	--card: #ffc451;
 	--ink: #000000;
-	--acc: #bb943f;
+	--acc: #c99226;
 	--body: #333333;
-	--line: #bb943f;
-	--goldlt: #f0c667;
-	--cardlt: #fbeac2; /* plan card hover: type lightens, card keeps its gold */
+	--line: #c99226;
+	--goldlt: #ffc451;
+	--cardlt: #ffe7b8; /* plan card hover: type lightens, card keeps its gold */
 
 	--disp: Archivo, 'Arial Narrow', sans-serif;
 	--serif: Newsreader, Georgia, 'Times New Roman', serif;
@@ -79,7 +82,7 @@ section[id] {
 	background: var(--ink);
 	border-radius: 20px;
 	/* keeps the pill readable where it sits over a black section */
-	box-shadow: 0 0 0 1px rgba(242, 210, 133, 0.28);
+	box-shadow: 0 0 0 1px rgba(255, 209, 119, 0.28);
 }
 
 .nav-home {
@@ -126,7 +129,7 @@ section[id] {
 	width: 1px;
 	height: 16px;
 	margin-left: 8px;
-	background: rgba(242, 210, 133, 0.3);
+	background: rgba(255, 209, 119, 0.3);
 }
 
 .nav-links a {
@@ -536,7 +539,7 @@ section[id] {
 	flex-wrap: wrap;
 	gap: clamp(16px, 3vw, 40px);
 	align-items: baseline;
-	border-top: 1px solid rgba(242, 210, 133, 0.22);
+	border-top: 1px solid rgba(255, 209, 119, 0.22);
 	padding-top: clamp(24px, 3vw, 40px);
 }
 
@@ -545,7 +548,7 @@ section[id] {
 	font-size: 12px;
 	font-weight: 700;
 	letter-spacing: 0.1em;
-	color: rgba(242, 210, 133, 0.66);
+	color: rgba(255, 209, 119, 0.66);
 }
 
 .footer-mail {
@@ -555,7 +558,7 @@ section[id] {
 	font-weight: 500;
 	letter-spacing: -0.01em;
 	color: var(--paper);
-	border-bottom: 1px solid rgba(242, 210, 133, 0.35);
+	border-bottom: 1px solid rgba(255, 209, 119, 0.35);
 	transition: color 200ms ease;
 }
 
