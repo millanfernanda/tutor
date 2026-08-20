@@ -175,8 +175,9 @@ section[id] {
 	font-family: 'Saira Condensed', var(--disp);
 	font-variation-settings: 'wdth' 62, 'wght' 900;
 	font-weight: 900;
-	/* sized off the column width; oversized on purpose so it runs over the photo */
-	font-size: clamp(48px, 42cqw, 340px);
+	/* sized off the column width; oversized on purpose so it runs over the
+	   photo. The design's ratio is a flat 42cqw, trimmed 3px here. */
+	font-size: clamp(48px, calc(42cqw - 3px), 340px);
 	line-height: 0.86;
 	letter-spacing: -0.008em;
 	white-space: nowrap;
@@ -212,11 +213,15 @@ section[id] {
 	color: var(--acc);
 }
 
+/* the whole panel rides up on scroll (see initHeroScroll). The photo fills it
+   at exactly the design's crop and is never scaled, so nothing zooms. */
 .hero-img {
 	align-self: stretch;
 	width: 100%;
 	min-height: clamp(320px, 46vw, 720px);
 	overflow: hidden;
+	translate: 0 var(--py, 0px);
+	will-change: translate;
 }
 
 .hero-img img {
@@ -243,16 +248,20 @@ section[id] {
 	font-weight: 700;
 	letter-spacing: 0.1em;
 	cursor: pointer;
-	transition: background 200ms ease, color 200ms ease;
+	transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .btn-pill:hover {
-	background: var(--acc);
-	color: var(--paper);
+	transform: scale(1.04);
 }
 
 .btn-arrow {
 	font-size: 13px;
+	transition: transform 220ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.btn-pill:hover .btn-arrow {
+	transform: translateY(3px);
 }
 
 .btn-submit {
@@ -281,11 +290,13 @@ section[id] {
 	flex-direction: column;
 	justify-content: space-between;
 	gap: 32px;
-	transition: background 200ms ease, color 200ms ease;
+	transition: background 200ms ease, color 200ms ease,
+		transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .plan-card:hover {
 	color: var(--cardlt);
+	transform: translateY(-6px);
 }
 
 .plan-num,
@@ -538,18 +549,36 @@ section[id] {
 }
 
 .footer-mail {
+	position: relative;
 	font-family: var(--mono);
 	font-size: clamp(15px, 2vw, 26px);
 	font-weight: 500;
 	letter-spacing: -0.01em;
 	color: var(--paper);
 	border-bottom: 1px solid rgba(242, 210, 133, 0.35);
-	transition: color 200ms ease, border-bottom-color 200ms ease;
+	transition: color 200ms ease;
+}
+
+/* brighter underline grows left to right over the resting one */
+.footer-mail::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -1px;
+	width: 100%;
+	height: 1px;
+	background: var(--goldlt);
+	transform: scaleX(0);
+	transform-origin: left center;
+	transition: transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
 }
 
 .footer-mail:hover {
 	color: var(--goldlt);
-	border-bottom-color: var(--goldlt);
+}
+
+.footer-mail:hover::after {
+	transform: scaleX(1);
 }
 
 /* ------------------------------ responsive ------------------------------ */
@@ -571,7 +600,7 @@ section[id] {
 		min-height: clamp(280px, 70vw, 520px);
 	}
 	.hero-title {
-		font-size: 20vw;
+		font-size: calc(20vw - 3px);
 	}
 	.exp-cta {
 		justify-content: flex-start;
@@ -602,5 +631,65 @@ section[id] {
 	}
 	.nav-links {
 		gap: 10px;
+	}
+}
+
+/* ------------------------------- motion -------------------------------
+   Entrances are limited to the SPANISH TUTOR headline and the About Me /
+   Schedule a Meeting headings. Everything else renders static.
+   Reveals use the `translate` property and hovers use `transform`, so a
+   hover never fights a reveal on the same element.
+   -------------------------------------------------------------------- */
+
+[data-reveal] {
+	opacity: 0;
+	translate: 0 24px;
+	transition: opacity 700ms ease, translate 700ms cubic-bezier(0.23, 1, 0.32, 1);
+	transition-delay: var(--d, 0ms);
+}
+
+[data-reveal].is-in {
+	opacity: 1;
+	translate: 0 0;
+}
+
+/* hero headline: letters rise out of a clipped line.
+   clip-path, not overflow:hidden — overflow clips both axes and would cut the
+   headline off where it runs past the column onto the photo. This masks the
+   bottom edge only and stays wide open left and right. */
+.hero-title .line {
+	display: block;
+	/* no padding here: it would add height the design does not have. The clip
+	   reaches a hair below the line box instead, which keeps glyph bottoms
+	   intact without changing the block's metrics. */
+	clip-path: inset(-0.4em -100vw -0.03em -100vw);
+}
+
+.hero-title .char {
+	display: inline-block;
+	translate: 0 110%;
+	transition: translate 900ms cubic-bezier(0.16, 1, 0.3, 1);
+	transition-delay: calc(var(--i, 0) * 45ms);
+}
+
+.hero-title.is-in .char {
+	translate: 0 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	html {
+		scroll-behavior: auto;
+	}
+	[data-reveal],
+	.hero-title .char,
+	.hero-img {
+		opacity: 1;
+		translate: 0 0;
+		transition: none;
+	}
+	.btn-pill:hover,
+	.plan-card:hover,
+	.btn-pill:hover .btn-arrow {
+		transform: none;
 	}
 }

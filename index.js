@@ -58,6 +58,98 @@ function onScroll() {
 	})
 }
 
+/* ------------------------------ motion ------------------------------ */
+
+/* wraps each letter in <span class="char" style="--i:n"> so CSS can stagger
+   them; a continuous index means TUTOR keeps cascading on from SPANISH */
+function splitLetters(root) {
+	let i = 0
+	let lines = root.querySelectorAll('.line')
+	let targets = lines.length ? lines : [root]
+
+	Array.prototype.forEach.call(targets, function (line) {
+		let text = line.textContent
+		line.textContent = ''
+		Array.prototype.forEach.call(text, function (character) {
+			let span = document.createElement('span')
+			span.className = 'char'
+			span.style.setProperty('--i', i++)
+			// a plain space would collapse once the char is inline-block
+			span.textContent = character === ' ' ? ' ' : character
+			line.appendChild(span)
+		})
+	})
+}
+
+/* one observer drives the entrances: the headline letters, the hero photo, and
+   the About Me / Schedule a Meeting blocks */
+function initReveals() {
+	let items = document.querySelectorAll('[data-reveal],[data-letters]')
+
+	if (!('IntersectionObserver' in window)) {
+		Array.prototype.forEach.call(items, function (el) {
+			el.classList.add('is-in')
+		})
+		return
+	}
+
+	let observer = new IntersectionObserver(
+		function (entries) {
+			entries.forEach(function (entry) {
+				if (!entry.isIntersecting) return
+				entry.target.classList.add('is-in')
+				observer.unobserve(entry.target)
+			})
+		},
+		{ threshold: 0.15, rootMargin: '0px 0px -8% 0px' }
+	)
+
+	Array.prototype.forEach.call(items, function (el) {
+		observer.observe(el)
+	})
+}
+
+/* The hero photo panel keeps riding up for as long as you scroll down, half a
+   pixel for every pixel of page scroll, and comes back down as you scroll up.
+   It moves the panel rather than the image inside it: the photo's aspect ratio
+   matches its frame almost exactly, so there is no spare crop to pan through
+   and anything else would mean scaling the photo up. */
+const HERO_RATE = 0.5
+
+function initHeroScroll() {
+	if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+	let frame = document.querySelector('.hero-img')
+	if (!frame) return
+
+	let queued = false
+	const apply = function () {
+		let offset = Math.max(window.scrollY, 0) * HERO_RATE
+		frame.style.setProperty('--py', -offset.toFixed(1) + 'px')
+		queued = false
+	}
+
+	window.addEventListener(
+		'scroll',
+		function () {
+			if (queued) return
+			queued = true
+			window.requestAnimationFrame(apply)
+		},
+		{ passive: true }
+	)
+	apply()
+}
+
+function initMotion() {
+	Array.prototype.forEach.call(
+		document.querySelectorAll('[data-letters]'),
+		splitLetters
+	)
+	initReveals()
+	initHeroScroll()
+}
+
 /* ------------------------------ email ------------------------------ */
 
 function sendEmail() {
@@ -110,6 +202,7 @@ function init() {
 
 	window.addEventListener('scroll', onScroll, { passive: true })
 	highlightNav()
+	initMotion()
 }
 
 document.addEventListener('DOMContentLoaded', init)

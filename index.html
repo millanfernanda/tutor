@@ -13,6 +13,18 @@
 		/>
 
 		<link rel="stylesheet" type="text/css" href="index.css" media="screen" />
+
+		<!-- the reveals start hidden and are shown by script; with scripting off,
+		     show everything up front instead -->
+		<noscript>
+			<style>
+				[data-reveal] {
+					opacity: 1;
+					translate: 0 0;
+				}
+			</style>
+		</noscript>
+
 		<script src="index.js"></script>
 
 		<script
@@ -58,7 +70,10 @@
 			<div class="hero">
 				<div class="hero-copy">
 					<div class="hero-title-fit">
-						<h1 class="hero-title">SPANISH<br />TUTOR</h1>
+						<h1 class="hero-title" data-letters>
+							<span class="line">SPANISH</span>
+							<span class="line">TUTOR</span>
+						</h1>
 					</div>
 					<div class="hero-stack">
 						<div class="hero-lines">
@@ -100,7 +115,7 @@
 		<!-- ============================== ABOUT ============================== -->
 		<section class="wrap about-wrap" id="about">
 			<div class="split split-about">
-				<h2 class="big-head sticky-head">About Me</h2>
+				<h2 class="big-head sticky-head" data-reveal>About Me</h2>
 				<div class="split-body">
 					<p class="lead-copy">
 						I&rsquo;m a native Spanish speaker passionate about literature,
@@ -159,7 +174,7 @@
 		<!-- ============================== CONTACT ============================== -->
 		<section class="wrap contact-wrap" id="contact">
 			<div class="split split-contact">
-				<h2 class="big-head">SCHEDULE A MEETING</h2>
+				<h2 class="big-head sticky-head" data-reveal>SCHEDULE A MEETING</h2>
 				<form class="form" onsubmit="sendEmail(); return false;">
 					<div class="field">
 						<label class="field-label" for="name">NAME</label>
